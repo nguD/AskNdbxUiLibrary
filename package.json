@@ -1,15 +1,15 @@
 {
-  "name": "ask-ndbx-ui-library",
-  "version": "0.0.0",
+  "name": "@nguD/askndbxuilibrary",
+  "version": "0.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "publish": "ng build && cd dist/ask-ndbx-ui && npm publish",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
@@ -46,5 +46,8 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
