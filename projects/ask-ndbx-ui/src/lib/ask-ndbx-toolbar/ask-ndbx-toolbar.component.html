@@ -1,0 +1,49 @@
+<header nx-header>
+  <nx-header-brand>
+    <button (click)="sidebar.toggle()" class="header-menu-btn" nxIconButton="tertiary" type="button">
+      <nx-icon name="bars"></nx-icon>
+    </button>
+    <nx-link>
+      <a href="#">
+        <figure nxFigure>
+          <img class="nx-margin-right-2xs" src='https://api-test.allianz.com/ngx-ndbx-lts/assets/logos/allianz_logo.svg' alt="Allianz Global Brand Logo" role="none">
+          <h4 class="header-title">{{title}}</h4>
+        </figure>
+      </a>
+    </nx-link>
+  </nx-header-brand>
+
+  <nx-header-actions>
+    <button nxButton="tertiary" class="login-button" type="button">
+      <nx-icon name="user-o"  size="l" class="nx-margin-right-2xs"></nx-icon> Bienvenue, {{identity}}
+    </button>
+  </nx-header-actions>
+</header>
+
+<nx-sidebar class="my-sidebar" minWidth="280" [ngClass]="{'default-closed': isInit == false}" #sidebar>
+  <button nxAction (click)="onLogout.emit($event)" type="button">
+    <nx-icon nxActionIcon name="export-and-share"></nx-icon>
+    Se déconnecter
+  </button>
+  <hr>
+  <button nxAction
+      *ngFor="let item of menuItems"
+      routerLink="{{item.link}}"
+      routerLinkActive="is-selected"
+      type="button">
+    <nx-icon nxActionIcon [name]="item.icon"></nx-icon>
+    {{item.label}}
+  </button>
+
+    <nx-sidebar-footer *ngIf="isAgent || isSupervisor" class="pdf-links">
+      <button nxAction="tertiary" 
+        *ngFor="let item of pdfFiles"
+        (click)="item.onClick()"
+        type="button">
+      <nx-icon nxActionIcon name="pdf"></nx-icon>
+      {{item.label}}
+    </button>
+    </nx-sidebar-footer>
+  
+</nx-sidebar>
+

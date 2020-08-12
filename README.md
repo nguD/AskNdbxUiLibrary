@@ -1,6 +1,13 @@
 # AskNdbxUiLibrary
 
+## Dev tutorial
+
+
 ## How to install AskNdbxUiLibrary 
+
+1. ng build && cd dist/ask-ndbx-ui && npm link
+2. Go to main repo run : npm link @nguD/askndbxuilibrary
+3. ng build --watch
 
 ### Add package reference
 

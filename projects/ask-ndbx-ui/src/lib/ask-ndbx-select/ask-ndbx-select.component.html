@@ -1,0 +1,63 @@
+<!--<mat-form-field *ngIf="data; else unavailable">-->
+<!-- <mat-form-field *ngIf="hasNoError">
+  <mat-select placeholder="{{label}}"
+              [value]="recovery"
+              [formControl]="selected"
+              (selectionChange)="onSelectionChange($event)"
+              (openedChange)="onOpenedChange($event)" *ngIf="multiple"
+              multiple>
+    <mat-option *ngFor="let item of data" [value]="item">
+      {{value(item)}}
+    </mat-option>
+  </mat-select>
+
+
+  <mat-select placeholder="{{label}}" [formControl]="selected"
+              (selectionChange)="onSelectionChange($event)"
+              (openedChange)="onOpenedChange($event)" *ngIf="!multiple">
+
+    <mat-option *ngFor="let item of data" [value]="item">
+      {{value(item)}}
+    </mat-option>
+  </mat-select>
+
+  <mat-hint *ngIf="hintable">Filtrer sur {{label.toLowerCase()}}</mat-hint>
+  <mat-error *ngIf="selected.hasError('required')">Sélection requise</mat-error>
+</mat-form-field> -->
+
+
+<div nxRow *ngIf="hasNoError" >
+  <div nxCol="12, 12, 6">
+    <nx-formfield nxLabel="{{label}}"  *ngIf="!multiple">
+      <nx-dropdown [(nxValue)]="curValue" formControlName="selected" [nxValueFormatter]="valueFormater" (openedChange)="onOpenedChange($event)" (selectionChange)="onSelectionChange($event)">
+        <nx-dropdown-item *ngFor="let item of data" [nxValue]="item"></nx-dropdown-item>
+      </nx-dropdown>
+      <nx-error nxFormfieldError>Sélection requise</nx-error>
+    </nx-formfield>
+  </div>
+  <div nxCol="12, 12, 6">
+    <nx-formfield  nxLabel="{{label}}" *ngIf="multiple">
+      <nx-dropdown [(nxValue)]="curValue" formControlName="selected" [nxValueFormatter]="valueFormater" [nxIsMultiselect]="true" (openedChange)="onOpenedChange($event)" (selectionChange)="onSelectionChange($event)">
+        <nx-dropdown-item *ngFor="let item of data" [nxValue]="item"></nx-dropdown-item>
+      </nx-dropdown>
+      <nx-error nxFormfieldError>Sélection requise</nx-error>
+    </nx-formfield>
+  </div>
+</div>
+
+
+<div  *ngIf="hasError" nxLabel="Données non disponibles">
+  <div nxCol="12, 12, 6">
+    <nx-dropdown [nxDisabled]="true">
+    </nx-dropdown>
+  </div>
+</div>
+
+<!-- 
+<mat-form-field disabled>
+  <mat-label>
+    <mat-error></mat-error>
+  </mat-label>
+  <mat-select placeholder="">
+  </mat-select>
+</mat-form-field> -->
