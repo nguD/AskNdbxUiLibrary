@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'ask-ndbx-tabs',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskNdbxTabsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private renderer:Renderer2) { 
+   
+    
+    // this.renderer.addClass(document.getElementsByClassName("mat-table")[0],"selected");
   }
 
+  ngOnInit() {     
+  }
 }

@@ -8,6 +8,7 @@ export * from './lib/ask-ndbx-tabs/ask-ndbx-tabs.module';
 export * from './lib/ask-ndbx-toolbar/ask-ndbx-toolbar.module';
 export * from './lib/ask-ndbx-select/ask-ndbx-select.module'
 export * from './lib/ask-ndbx-date-picker/ask-ndbx-date-picker.module' 
+export * from './lib/ask-ndbx-table/ask-ndbx-table.module' 
 
 
 

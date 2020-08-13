@@ -1,0 +1,16 @@
+:host ::ng-deep table {
+  width: 100%; 
+  border-bottom: 2px solid #414141;
+  border-bottom: 2px solid var(--table-border-bottom-color,#414141);
+  border-bottom: 2px solid var(--table-header-border-bottom-color,#414141);
+  th {
+    padding-bottom:14px;
+    padding-left:8px;
+    padding-right:16px;
+    padding-top:16px;
+    -webkit-border-horizontal-spacing:0px;
+    -webkit-border-vertical-spacing:0px;
+  }
+}
+
+ 

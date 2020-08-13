@@ -1,0 +1,39 @@
+
+<div class="ask-ndbx-table">
+  <ng-content></ng-content>
+  <table nxTable>
+  <thead>
+    <tr nxTableRow>
+      <th nxHeaderCell>
+        Product
+      </th>
+      <th nxHeaderCell>
+        Contract Number
+      </th>
+      <th nxHeaderCell>
+        Description
+      </th>
+      <th nxHeaderCell>
+        Website
+      </th>
+      <th nxHeaderCell>
+        Ending At
+      </th>
+      <th nxHeaderCell>
+        Status
+      </th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr nxTableRow *ngFor="let item of tableElements">
+        <td nxTableCell>{{item.product}}</td>
+        <td nxTableCell>{{item.contractNumber}}</td>
+        <td nxTableCell>{{item.desc}}</td>
+        <td nxTableCell>
+         {{item.website}}
+        </td>
+        <td nxTableCell>{{item.endingAt}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
