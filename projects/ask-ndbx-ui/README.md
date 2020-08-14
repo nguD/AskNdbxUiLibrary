@@ -1,24 +1,27 @@
 # AskNdbxUi
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+## ask-ndbx-tabs
 
-## Code scaffolding
+## ask-ndbx-toolbar
 
-Run `ng generate component component-name --project AskNdbxUi` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project AskNdbxUi`.
-> Note: Don't forget to add `--project AskNdbxUi` or else it will be added to the default project in your `angular.json` file. 
+## ask-ndbx-select
 
-## Build
+## ask-ndbx-date-picker
 
-Run `ng build AskNdbxUi` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ask-ndbx-table
+Ndbx table css
 
-## Publishing
+```html
+<ask-ndbx-table>
+  ... old table html code ...
+</ask-ndbx-table>
+```
 
-After building your library with `ng build AskNdbxUi`, go to the dist folder `cd dist/ask-ndbx-ui` and run `npm publish`.
+## ask-ndbx-show-more
+Show more component 
 
-## Running unit tests
-
-Run `ng test AskNdbxUi` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+<ask-ndbx-show-more [showLabel]="Show more" [hideLabel]="Hide options" [defaultShow]="false"> 
+  ...
+</ask-ndbx-show-more>
+```
