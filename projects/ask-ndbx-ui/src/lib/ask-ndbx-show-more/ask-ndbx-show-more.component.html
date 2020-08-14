@@ -1,0 +1,9 @@
+<nx-link *ngIf="hide">
+  <a (click)="toggleContent()">{{showLabel}}</a>
+</nx-link>
+<nx-link *ngIf="!hide">
+  <a (click)="toggleContent()">{{hideLabel}}</a>
+</nx-link>
+<ng-content *ngIf="!hide"></ng-content>
+
+
