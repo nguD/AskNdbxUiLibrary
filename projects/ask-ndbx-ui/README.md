@@ -21,7 +21,7 @@ Ndbx table css
 Show more component 
 
 ```html
-<ask-ndbx-show-more [showLabel]="Show more" [hideLabel]="Hide options" [defaultShow]="false"> 
+<ask-ndbx-show-more [showLabel]="Show more" [hideLabel]="Hide options"> 
   ...
 </ask-ndbx-show-more>
 ```

@@ -47,7 +47,7 @@
   }
 }
 
-:host ::ng-deep .yellow-bubble-style  .nx-tab-header__item.nx-tab-header__item--active {
+:host ::ng-deep .yellow-bubble-style .nx-tab-header__item.nx-tab-header__item--active {
   background-color: #fdd35c;
   height: 90px;
 }
@@ -55,3 +55,7 @@
   height: 40px;
 }
 
+
+:host ::ng-deep .yellow-bubble-style .nx-tab-header {
+  padding: 0px 0px 60px 0px;
+}
