@@ -34,7 +34,5 @@ export class AskNdbxToolbarComponent implements OnInit {
     setTimeout(() => {
       this.isInit = true;  
     }, 300); 
-    console.log('[DEBUG] AskNdbxToolbarComponent', this.pdfFiles, this.menuItems);
-    
   }
 }

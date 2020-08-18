@@ -13,24 +13,34 @@ export class AskNdbxTableComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    console.log('[DEBUG] Renderer2', );
-    setTimeout(() => {
-      this.cssModifier();
-    }, 0);
+    // console.log('[DEBUG] Renderer2', );
+    // setTimeout(() => {
+    //   this.cssModifier();
+    // }, 1000);
   }
 
-  cssModifier() {
-    const el = document.getElementsByClassName("mat-table")[0];
-    this.renderer.removeClass(el,"mat-table");
-    this.renderer.addClass(el,"nx-table");
-    let els = document.getElementsByClassName("mat-header-cell");
-    for (let i = 0; i < els.length; i++) {
-      const el = els[i];
-      setTimeout(() => { 
-        this.renderer.removeClass(el,"mat-header-cell");
-        this.renderer.addClass(el,"nx-header-cell");
-      }, 0);
-    }
-  }
+  // cssModifier() {
+    // let el = document.getElementsByClassName("mat-table")[0];
+    // if (el && el.classList) {
+    //   console.log('[DEBUG] change css table');
+      
+    //   this.renderer.removeClass(el,"mat-table");
+    //   this.renderer.addClass(el,"nx-table");
+    //   this.renderer.removeAttribute(el, "mat-table");
+    // }
+    // let els = document.getElementsByClassName("mat-header-cell");
+    // for (let i = 0; i < els.length; i++) {
+    //   var cell = els[i];
+    //   console.log('[DEBUG] change css table cell ', cell); 
+    //   setTimeout(() => { 
+    //     if (cell && cell.classList) {
+    //       this.renderer.removeClass(cell,"mat-header-cell");
+    //       this.renderer.addClass(cell,"nx-header-cell");
+    //       this.renderer.removeAttribute(cell, "mat-header-cell");
+    //       console.log('[DEBUG] change css table cell 2', cell); 
+    //     }
+    //   }, 0);
+    // }
+  // }
 
 }
