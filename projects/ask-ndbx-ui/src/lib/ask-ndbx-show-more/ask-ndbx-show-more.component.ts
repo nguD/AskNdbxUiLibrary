@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AskNdbxShowMoreComponent implements OnInit {
 
-  @Input() showLabel = "Show";
-  @Input() hideLabel = "Hide";
+  @Input() showLabel = "Recherche avancée";
+  @Input() hideLabel = "Fermer la recherche avancée";
   @Input() defaultShow = false;
 
   hide: boolean = true;
