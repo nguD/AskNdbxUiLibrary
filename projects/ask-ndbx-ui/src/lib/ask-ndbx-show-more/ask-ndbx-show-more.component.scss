@@ -2,9 +2,11 @@
   display: none;
 }
 
-.show-hide-btn {
+.show-hide-btn  {
   text-align: right;
-  line-height: 34px;
-  margin-top: -50px;
-  margin-bottom: 11px;
+  height: 10px;
+  nx-link {
+    margin-bottom: 11px;
+    top: -54px;
+  }
 }

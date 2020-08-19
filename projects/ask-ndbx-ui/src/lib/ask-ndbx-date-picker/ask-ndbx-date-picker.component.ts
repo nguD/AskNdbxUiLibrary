@@ -26,6 +26,13 @@ export class AskNdbxDatePickerComponent implements OnInit {
     setTimeout(() => this.endDatepicker.open());
   }
 
+  submitDate() {
+    console.log('[DEBUG] submit date', this.start, this.end);
+    this.changed.emit({
+      start: this.start.toDate() as Date,
+      end: this.end.toDate() as Date
+    });
+  }
 
   constructor() { }
 

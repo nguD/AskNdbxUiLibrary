@@ -13,10 +13,15 @@
  
       <div nxCol="6">
         <nx-formfield nxLabel="End date">
-          <input nxDatefield nxInput [nxDatepicker]="endDatepicker" [(ngModel)]="end"/>
+          <input nxDatefield nxInput [nxDatepicker]="endDatepicker" [(ngModel)]="end"
+            (dateChange)="submitDate()"/>
           <nx-datepicker-toggle [for]="endDatepicker" nxFormfieldSuffix></nx-datepicker-toggle>
           <nx-datepicker #endDatepicker></nx-datepicker>
         </nx-formfield>
       </div>
     </div>
   </div>
+<!-- 
+   <ask-ndbx-date-picker class="filter" *ngIf="(period$ | async); let period" [placeholder]="placeholder"
+                [start]="startDate" [end]="endDate" (changed)="changeDate($event, period)">
+              </ask-ndbx-date-picker> -->
