@@ -3,7 +3,7 @@
   "dest": "../../dist/ask-ndbx-ui",
   "lib": {
     "entryFile": "src/public-api.ts"
-  },
+  }, 
   "whitelistedNonPeerDependencies": [
     "@allianz/ngx-ndbx",
     "@allianz/ndbx-styles",

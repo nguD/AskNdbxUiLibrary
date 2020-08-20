@@ -1,0 +1,36 @@
+.user-info-card {
+  background-color: #007ab3;
+  color: white;
+}
+
+.avatar {
+  float: right;
+  position: relative;
+  top: -68%;
+  bottom: 8px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px 0 rgba(65,65,65,.35);
+}
+.user-info-block {
+  font-size: 14px;
+  div {
+    margin: 4px 0px;
+  }
+}
+  
+.user-avatar {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: auto;
+  padding: 5px 19px;
+}
+
+.user-info-card {
+  margin: 32px auto 22px auto;
+}
