@@ -6,7 +6,6 @@
     "start": "ng serve",
     "publish": "cd projects/ask-ndbx-ui/ && npm version patch && cd ../../ && npm run build && cd dist/ask-ndbx-ui && npm publish",
     "build": "ng build",
-    "postbuild": "cp -r projects/ask-ndbx-ui/src/assets dist/ask-ndbx-ui/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
